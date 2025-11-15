@@ -1,0 +1,11 @@
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - '@vue-office/docx'
+  - '@vue-office/excel'
+  - '@vue-office/pdf'
+  - core-js
+  - core-js-pure
+  - es5-ext
+  - esbuild
+  - vue-demi
+  - yorkie
