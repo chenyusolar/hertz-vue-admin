@@ -29,7 +29,7 @@ captcha:
     open-captcha-timeout: 3600
 cloudflare-r2:
     bucket: xxxx0bucket
-    base-url: https://gin.vue.admin.com
+    base-url: https://hertz.vue.admin.com
     path: uploads
     account-id: xxx_account_id
     access-key-id: xxx_key_id

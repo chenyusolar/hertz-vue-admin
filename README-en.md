@@ -80,11 +80,11 @@ We are excited that you are interested in contributing to gin-vue-admin. Before 
 
 ### 2.1 server project
 
-use `Goland` And other editing tools，open server catalogue，You can't open it. `gin-vue-admin` root directory
+use `Goland` And other editing tools，open server catalogue，You can't open it. `hertz-vue-admin` root directory
 
 ```bash
 # clone the project
-git clone https://github.com/flipped-aurora/gin-vue-admin.git
+git clone https://github.com/chenyusolar/hertz-vue-admin.git
 
 # open server catalogue
 cd server
@@ -165,7 +165,7 @@ swag init
 ## 3. Technical selection
 
 - Frontend: using [Element](https://github.com/ElemeFE/element) based on [Vue](https://vuejs.org)，to code the page.
-- Backend: using [Gin](https://gin-gonic.com/) to quickly build basic RESTful API. [Gin](https://gin-gonic.com/)is a web framework written in Go (Golang).
+- Backend: using [Gin](https://gin-gonic.com/) to quickly build basic RESTful API. [Hertz](https://hertz-gonic.com/)is a web framework written in Go (Golang).
 - DB: `MySql`(5.6.44)，using [gorm](http://gorm.io)` to implement data manipulation, added support for SQLite databases.
 - Cache: using `Redis` to implement the recording of the JWT token of the currently active user and implement the multi-login restriction.
 - API: using Swagger to auto generate APIs docs。
@@ -242,76 +242,4 @@ swag init
 - Upload file by chunk：Provides examples of file upload and large file upload by chunk.
 - Form Builder：With the help of [@form-generator](https://github.com/JakHuang/form-generator).
 - Code generator: Providing backend with basic logic and simple curd code generator.
-
-## 6. Knowledge base
-
-### 6.1 Team blog
-
-> https://www.yuque.com/flipped-aurora
->
->There are video courses about frontend framework in our blo. If you think the project is helpful to you, you can add my personal WeChat:shouzi_1994，your comments is welcomed。
-
-### 6.2 Video courses
-
-(1) Development environment course
-
-> Bilibili：https://www.bilibili.com/video/BV1Fg4y187Bw/
-
-(2) Template course
-
-> Bilibili：https://www.bilibili.com/video/BV16K4y1r7BD/
-
-(3) 2.0 version introduction and development experience
-
-> Bilibili：https://www.bilibili.com/video/BV1aV411d7Gm#reply2831798461
-
-(4) Golang basic course
-
-> https://space.bilibili.com/322210472/channel/detail?cid=108884
-
-(5) gin frame basic teaching
-
-> bilibili：https://space.bilibili.com/322210472/channel/detail?cid=126418&ctype=0
-
-(6) gin-vue-admin version update introduction video
-> bilibili：https://space.bilibili.com/322210472/channel/detail?cid=126418&ctype=0
-
-## 7.Contacts
-
-### 7.1 Groups
-
-#### QQ group: 622360840
-
-| QQ group |d
-|  :---:  |
-| <img src="http://qmplusimg.henrongyi.top/qq.jpg" width="180"/> |
-
-
-#### Wechat group: comment "加入gin-vue-admin交流群"
-
-| Wechat |
-|  :---:  | 
-| <img width="150" src="http://qmplusimg.henrongyi.top/qrjjz.png"> 
-
-#### [About Us](https://www.gin-vue-admin.com/about/join.html)
-
-## 8. Contributors
-
-Thank you for considering your contribution to gin-vue-admin!
-
-<a href="https://openomy.app/github/flipped-aurora/gin-vue-admin" target="_blank" style="display: block; width: 100%;" align="center">
-  <img src="https://openomy.app/svg?repo=flipped-aurora/gin-vue-admin&chart=bubble&latestMonth=3" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />
- </a>
-
-<a href="https://github.com/flipped-aurora/gin-vue-admin/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=flipped-aurora/gin-vue-admin" />
-</a>
-
-## 9. Donate
-
-If you find this project useful, you can buy author a glass of juice :tropical_drink: [here](https://www.gin-vue-admin.com/coffee/index.html)
-
-## 10. Commercial considerations
-
-If you use this project for commercial purposes, please comply with the Apache2.0 agreement and retain the author's technical support statement.
 

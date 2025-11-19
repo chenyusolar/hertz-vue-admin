@@ -1,8 +1,10 @@
 package router
 
 import (
+	"context"
 	{{if .OnlyTemplate }} // {{end}}"{{.Module}}/middleware"
-	"github.com/gin-gonic/gin"
+	"github.com/cloudwego/hertz/pkg/app"
+	"github.com/cloudwego/hertz/pkg/route"
 )
 
 var {{.StructName}} = new({{.Abbreviation}})
@@ -10,7 +12,7 @@ var {{.StructName}} = new({{.Abbreviation}})
 type {{.Abbreviation}} struct {}
 
 // Init 初始化 {{.Description}} 路由信息
-func (r *{{.Abbreviation}}) Init(public *gin.RouterGroup, private *gin.RouterGroup) {
+func (r *{{.Abbreviation}}) Init(public *route.RouterGroup, private *route.RouterGroup) {
 {{- if not .OnlyTemplate }}
 	{
 	    group := private.Group("{{.Abbreviation}}").Use(middleware.OperationRecord())

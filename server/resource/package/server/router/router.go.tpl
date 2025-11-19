@@ -1,14 +1,16 @@
 package {{.Package}}
 
 import (
+	"context"
 	{{if .OnlyTemplate}}// {{ end}}"{{.Module}}/middleware"
-	"github.com/gin-gonic/gin"
+	"github.com/cloudwego/hertz/pkg/app"
+	"github.com/cloudwego/hertz/pkg/route"
 )
 
 type {{.StructName}}Router struct {}
 
 // Init{{.StructName}}Router 初始化 {{.Description}} 路由信息
-func (s *{{.StructName}}Router) Init{{.StructName}}Router(Router *gin.RouterGroup,PublicRouter *gin.RouterGroup) {
+func (s *{{.StructName}}Router) Init{{.StructName}}Router(Router *route.RouterGroup,PublicRouter *route.RouterGroup) {
 	{{- if not .OnlyTemplate}}
 	{{.Abbreviation}}Router := Router.Group("{{.Abbreviation}}").Use(middleware.OperationRecord())
 	{{.Abbreviation}}RouterWithoutRecord := Router.Group("{{.Abbreviation}}")

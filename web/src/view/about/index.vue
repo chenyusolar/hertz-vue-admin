@@ -4,37 +4,37 @@
       <div class="w-full md:w-1/2">
         <el-card class="min-w-96">
           <template #header>
-            <el-divider>gin-vue-admin</el-divider>
+            <el-divider>hertz-vue-admin</el-divider>
           </template>
           <div>
             <div class="w-full flex items-center justify-center">
-              <a href="https://github.com/flipped-aurora/gin-vue-admin">
+              <a href="https://github.com/chenyusolar/hertz-vue-admin">
                   <img
                     class="org-img dom-center"
                     src="@/assets/logo.png"
-                    alt="gin-vue-admin"
+                    alt="hertz-vue-admin"
                   />
                 </a>
             </div>
             <div class="w-full flex items-center justify-around">
-              <a href="https://github.com/flipped-aurora/gin-vue-admin">
+              <a href="https://github.com/chenyusolar/hertz-vue-admin">
                   <img
                     class="dom-center"
-                    src="https://img.shields.io/github/watchers/flipped-aurora/gin-vue-admin.svg?label=Watch"
+                    src="https://img.shields.io/github/watchers/chenyusolar/hertz-vue-admin.svg?label=Watch"
                     alt=""
                   />
                 </a>
-                <a href="https://github.com/flipped-aurora/gin-vue-admin">
+                <a href="https://github.com/chenyusolar/hertz-vue-admin">
                   <img
                     class="dom-center"
-                    src="https://img.shields.io/github/stars/flipped-aurora/gin-vue-admin.svg?style=social"
+                    src="https://img.shields.io/github/stars/chenyusolar/hertz-vue-admin.svg?style=social"
                     alt=""
                   />
                 </a>
-                <a href="https://github.com/flipped-aurora/gin-vue-admin">
+                <a href="https://github.com/chenyusolar/hertz-vue-admin">
                   <img
                     class="dom-center"
-                    src="https://img.shields.io/github/forks/flipped-aurora/gin-vue-admin.svg?label=Fork"
+                    src="https://img.shields.io/github/forks/chenyusolar/hertz-vue-admin.svg?label=Fork"
                     alt=""
                   />
                 </a>

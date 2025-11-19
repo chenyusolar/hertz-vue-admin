@@ -3,10 +3,11 @@ package initialize
 import (
 	"{{.Module}}/global"
 	"{{.Module}}/middleware"
-	"github.com/gin-gonic/gin"
+	"github.com/cloudwego/hertz/pkg/app/server"
+	"github.com/cloudwego/hertz/pkg/route"
 )
 
-func Router(engine *gin.Engine) {
+func Router(engine *server.Hertz) {
 	public := engine.Group(global.GVA_CONFIG.System.RouterPrefix).Group("")
 	public.Use()
 	private := engine.Group(global.GVA_CONFIG.System.RouterPrefix).Group("")

@@ -4,7 +4,7 @@ import (
 	"context"
 	"{{.Module}}/plugin/{{ .Package }}/initialize"
 	interfaces "{{.Module}}/utils/plugin/v2"
-	"github.com/gin-gonic/gin"
+	"github.com/cloudwego/hertz/pkg/app/server"
 )
 
 var _ interfaces.Plugin = (*plugin)(nil)
@@ -19,7 +19,7 @@ type plugin struct{}
 // initialize.Api(ctx)
 // 安装插件时候自动注册的api数据请到下方法.Menu方法中实现并添加如下方法
 // initialize.Menu(ctx)
-func (p *plugin) Register(group *gin.Engine) {
+func (p *plugin) Register(group *server.Hertz) {
 	ctx := context.Background() 
 	initialize.Gorm(ctx)
 	initialize.Router(group)

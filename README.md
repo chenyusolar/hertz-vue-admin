@@ -161,7 +161,7 @@ swag init
 
 #### 2.4.1 开发
 
-使用`VSCode`打开根目录下的工作区文件`gin-vue-admin.code-workspace`，在边栏可以看到三个虚拟目录：`backend`、`frontend`、`root`。
+使用`VSCode`打开根目录下的工作区文件`hertz-vue-admin.code-workspace`，在边栏可以看到三个虚拟目录：`backend`、`frontend`、`root`。
 
 #### 2.4.2 运行/调试
 
@@ -316,70 +316,5 @@ swag init
 - 表单生成器：表单生成器借助 [@Variant Form](https://github.com/vform666/variant-form) 。
 - 代码生成器：后台基础逻辑以及简单curd的代码生成器。
 
-## 6. 知识库 
 
-## 6.1 团队博客
 
-> https://www.yuque.com/flipped-aurora
->
->内有前端框架教学视频。如果觉得项目对您有所帮助可以添加我的个人微信:shouzi_1994，欢迎您提出宝贵的需求。
-
-## 6.2 教学视频
-
-（1）手把手教学视频
-
-> https://www.bilibili.com/video/BV1Rg411u7xH/
-
-（2）后端目录结构调整介绍以及使用方法
-
-> https://www.bilibili.com/video/BV1x44y117TT/
-
-（3）golang基础教学视频
-
-> bilibili：https://space.bilibili.com/322210472/channel/detail?cid=108884
-
-（4）gin框架基础教学
-
-> bilibili：https://space.bilibili.com/322210472/channel/detail?cid=126418&ctype=0
-
-（5）gin-vue-admin 版本更新介绍视频
-
-> bilibili：https://www.bilibili.com/video/BV1kv4y1g7nT
-
-## 7. 联系方式
-
-### 7.1 技术群
-
-### QQ交流群：971857775
-
-### 微信交流群
-| 微信 |
-|  :---:  | 
-| <img width="150" src="http://qmplusimg.henrongyi.top/qrjjz.png"> 
-
-防止广告进群，添加微信，输入以下代码执行结果（请勿转码为string）
-
-```
-str := "5Yqg5YWlR1ZB5Lqk5rWB576k"
-decodeBytes, err := base64.StdEncoding.DecodeString(str)
-fmt.Println(decodeBytes, err)
-```
-
-### [关于我们](https://www.gin-vue-admin.com/about/join.html)
-
-## 8. 贡献者
-
-感谢您对gin-vue-admin的贡献!
-
-<a href="https://openomy.app/github/flipped-aurora/gin-vue-admin" target="_blank" style="display: block; width: 100%;" align="center">
-  <img src="https://openomy.app/svg?repo=flipped-aurora/gin-vue-admin&chart=bubble&latestMonth=3" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />
- </a>
-
-## 9. 捐赠
-
-如果你觉得这个项目对你有帮助，你可以请作者喝饮料 :tropical_drink: [点我](https://www.gin-vue-admin.com/coffee/index.html)
-
-## 10. 注意事项
-
-请严格遵守Apache 2.0协议并保留作品声明，去除版权信息请务必[获取授权](https://www.gin-vue-admin.com/empower/)  
-未授权去除版权信息将依法追究法律责任

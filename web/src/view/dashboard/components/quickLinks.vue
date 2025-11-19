@@ -1,6 +1,6 @@
 <!--
-    @auther: bypanghu<bypanghu@163.com>
-    @date: 2024/5/8
+    @auther: clarkzhu<chenyusolar@gmail.com>
+    @date: 2025/11/18
 !-->
 <template>
   <div class="mt-8 w-full">

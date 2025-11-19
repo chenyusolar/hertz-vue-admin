@@ -1,6 +1,7 @@
 package {{.Package}}
 
 import (
+	"context"
 	{{if not .OnlyTemplate}}
 	"{{.Module}}/global"
     "{{.Module}}/model/common/response"
@@ -8,14 +9,14 @@ import (
     {{- if not .IsTree}}
     {{.Package}}Req "{{.Module}}/model/{{.Package}}/request"
     {{- end }}
-    "github.com/gin-gonic/gin"
+    "github.com/cloudwego/hertz/pkg/app"
     "go.uber.org/zap"
     {{- if .AutoCreateResource}}
     "{{.Module}}/utils"
     {{- end }}
     {{- else}}
     "{{.Module}}/model/common/response"
-    "github.com/gin-gonic/gin"
+    "github.com/cloudwego/hertz/pkg/app"
     {{- end}}
 )
 
@@ -32,7 +33,7 @@ type {{.StructName}}Api struct {}
 // @Param data body {{.Package}}.{{.StructName}} true "创建{{.Description}}"
 // @Success 200 {object} response.Response{msg=string} "创建成功"
 // @Router /{{.Abbreviation}}/create{{.StructName}} [post]
-func ({{.Abbreviation}}Api *{{.StructName}}Api) Create{{.StructName}}(c *gin.Context) {
+func ({{.Abbreviation}}Api *{{.StructName}}Api) Create{{.StructName}}(c ctx context.Context, c *app.RequestContext) {
     // 创建业务用Context
     ctx := c.Request.Context()
 
@@ -63,7 +64,7 @@ func ({{.Abbreviation}}Api *{{.StructName}}Api) Create{{.StructName}}(c *gin.Con
 // @Param data body {{.Package}}.{{.StructName}} true "删除{{.Description}}"
 // @Success 200 {object} response.Response{msg=string} "删除成功"
 // @Router /{{.Abbreviation}}/delete{{.StructName}} [delete]
-func ({{.Abbreviation}}Api *{{.StructName}}Api) Delete{{.StructName}}(c *gin.Context) {
+func ({{.Abbreviation}}Api *{{.StructName}}Api) Delete{{.StructName}}(c ctx context.Context, c *app.RequestContext) {
     // 创建业务用Context
     ctx := c.Request.Context()
 
@@ -88,7 +89,7 @@ func ({{.Abbreviation}}Api *{{.StructName}}Api) Delete{{.StructName}}(c *gin.Con
 // @Produce application/json
 // @Success 200 {object} response.Response{msg=string} "批量删除成功"
 // @Router /{{.Abbreviation}}/delete{{.StructName}}ByIds [delete]
-func ({{.Abbreviation}}Api *{{.StructName}}Api) Delete{{.StructName}}ByIds(c *gin.Context) {
+func ({{.Abbreviation}}Api *{{.StructName}}Api) Delete{{.StructName}}ByIds(c ctx context.Context, c *app.RequestContext) {
     // 创建业务用Context
     ctx := c.Request.Context()
 
@@ -114,7 +115,7 @@ func ({{.Abbreviation}}Api *{{.StructName}}Api) Delete{{.StructName}}ByIds(c *gi
 // @Param data body {{.Package}}.{{.StructName}} true "更新{{.Description}}"
 // @Success 200 {object} response.Response{msg=string} "更新成功"
 // @Router /{{.Abbreviation}}/update{{.StructName}} [put]
-func ({{.Abbreviation}}Api *{{.StructName}}Api) Update{{.StructName}}(c *gin.Context) {
+func ({{.Abbreviation}}Api *{{.StructName}}Api) Update{{.StructName}}(c ctx context.Context, c *app.RequestContext) {
     // 从ctx获取标准context进行业务行为
     ctx := c.Request.Context()
 
@@ -145,7 +146,7 @@ func ({{.Abbreviation}}Api *{{.StructName}}Api) Update{{.StructName}}(c *gin.Con
 // @Param {{.PrimaryField.FieldJson}} query {{.PrimaryField.FieldType}} true "用id查询{{.Description}}"
 // @Success 200 {object} response.Response{data={{.Package}}.{{.StructName}},msg=string} "查询成功"
 // @Router /{{.Abbreviation}}/find{{.StructName}} [get]
-func ({{.Abbreviation}}Api *{{.StructName}}Api) Find{{.StructName}}(c *gin.Context) {
+func ({{.Abbreviation}}Api *{{.StructName}}Api) Find{{.StructName}}(c ctx context.Context, c *app.RequestContext) {
     // 创建业务用Context
     ctx := c.Request.Context()
 
@@ -168,7 +169,7 @@ func ({{.Abbreviation}}Api *{{.StructName}}Api) Find{{.StructName}}(c *gin.Conte
 // @Produce application/json
 // @Success 200 {object} response.Response{data=response.PageResult,msg=string} "获取成功"
 // @Router /{{.Abbreviation}}/get{{.StructName}}List [get]
-func ({{.Abbreviation}}Api *{{.StructName}}Api) Get{{.StructName}}List(c *gin.Context) {
+func ({{.Abbreviation}}Api *{{.StructName}}Api) Get{{.StructName}}List(c ctx context.Context, c *app.RequestContext) {
     // 创建业务用Context
     ctx := c.Request.Context()
 
@@ -190,7 +191,7 @@ func ({{.Abbreviation}}Api *{{.StructName}}Api) Get{{.StructName}}List(c *gin.Co
 // @Param data query {{.Package}}Req.{{.StructName}}Search true "分页获取{{.Description}}列表"
 // @Success 200 {object} response.Response{data=response.PageResult,msg=string} "获取成功"
 // @Router /{{.Abbreviation}}/get{{.StructName}}List [get]
-func ({{.Abbreviation}}Api *{{.StructName}}Api) Get{{.StructName}}List(c *gin.Context) {
+func ({{.Abbreviation}}Api *{{.StructName}}Api) Get{{.StructName}}List(c ctx context.Context, c *app.RequestContext) {
     // 创建业务用Context
     ctx := c.Request.Context()
 
@@ -223,7 +224,7 @@ func ({{.Abbreviation}}Api *{{.StructName}}Api) Get{{.StructName}}List(c *gin.Co
 // @Produce application/json
 // @Success 200 {object} response.Response{data=object,msg=string} "查询成功"
 // @Router /{{.Abbreviation}}/get{{.StructName}}DataSource [get]
-func ({{.Abbreviation}}Api *{{.StructName}}Api) Get{{.StructName}}DataSource(c *gin.Context) {
+func ({{.Abbreviation}}Api *{{.StructName}}Api) Get{{.StructName}}DataSource(c ctx context.Context, c *app.RequestContext) {
     // 创建业务用Context
     ctx := c.Request.Context()
 
@@ -247,7 +248,7 @@ func ({{.Abbreviation}}Api *{{.StructName}}Api) Get{{.StructName}}DataSource(c *
 // @Produce application/json
 // @Success 200 {object} response.Response{data=object,msg=string} "获取成功"
 // @Router /{{.Abbreviation}}/get{{.StructName}}Public [get]
-func ({{.Abbreviation}}Api *{{.StructName}}Api) Get{{.StructName}}Public(c *gin.Context) {
+func ({{.Abbreviation}}Api *{{.StructName}}Api) Get{{.StructName}}Public(c ctx context.Context, c *app.RequestContext) {
     // 创建业务用Context
     ctx := c.Request.Context()
 
